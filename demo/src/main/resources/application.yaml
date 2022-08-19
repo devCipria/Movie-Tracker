@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path:
+
+OMDB_api_key: 12b87e4f
+
+myapp:
+  value: "Doing Work"
+
+spring:
+  datasource:
+    #username: arantisi
+    #password: abejon300
+    #url: jdbc:postgresql://java-enterprise-220705.c5cumraomxxz.us-west-1.rds.amazonaws.com:5432/project2
+    username: postgres
+    password: pgdav9280
+    url: jdbc:postgresql://mypostgresdb.ctpoxfycgbg6.us-east-1.rds.amazonaws.com:5432/movies_db
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

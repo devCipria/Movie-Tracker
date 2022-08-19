@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="DefaultStyle.css"/>
+    <title>Watchlist</title>
+    <style>
+        .watchlist {
+            display :grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(auto-fill, 120px);
+            justify-items:center;
+            row-gap: 2em;
+        }
+        .poster{
+            display: inline-block;
+            width:300px;
+            height:450px;
+            padding: 1.5em;
+            box-shadow: 2px;
+            transition: box-shadow 200ms ease-in-out;
+            text-align: center;
+        }
+        .poster >img{
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+        }
+        .poster:hover{
+            transform:scale(1.05);
+            box-shadow: 2px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Code Brew</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="watchlist.html">Watchlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="favorites.html">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="review.html">My Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link text-danger" href="logout">Log out</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- List element -->
+        <div class="d-flex p-2 watchlist">
+            <div class="poster">
+                <img id="icon" src="" alt="Movie poster"></img>
+                <p id="movieName">Some Text</p>
+                <button class="btn btn-danger" id="btn-remove">remove</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/watchlist.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
